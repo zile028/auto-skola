@@ -48,7 +48,6 @@
         </article>
     </nav>
 
-
     <!-------- header -------->
     <header>
         <img src="img/slide-03.jpg" alt="">
