@@ -1,0 +1,15 @@
+/**************
+FLEX
+**************/
+@mixin flex($x: space-between, $y: stretch, $d: row) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: $d;
+  @if ($d==row) {
+    justify-content: $x;
+    align-items: $y;
+  } @else if($d==column) {
+    justify-content: $y;
+    align-items: $x;
+  }
+}

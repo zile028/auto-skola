@@ -1,0 +1,326 @@
+@import "var";
+@import "mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $textFont;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $black;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: $primary;
+    transition: color $transition;
+  }
+}
+
+.container {
+  width: 70%;
+  /* margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0; */
+  /* margin:0 auto 0 auto; */
+  margin: 0 auto;
+}
+.py {
+  padding: 140px 0;
+}
+.btn {
+  display: inline-block;
+  background-color: $primary;
+  color: $white;
+  padding: 1em 2.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: $transition;
+  border-radius: 5px;
+  &.btnLight {
+    background-color: $white;
+    color: $black;
+  }
+  &:hover {
+    color: $white;
+    background-color: $darkPrimary;
+  }
+}
+
+.title-section {
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    &::after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 70px;
+      background-color: $primary;
+      margin: 10px auto;
+    }
+  }
+}
+.card {
+  @include flex(center, space-between, column);
+  border: 1px solid $gray;
+
+  &-body {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    h6 {
+      line-height: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/**************
+top-bar
+**************/
+.topBar {
+  background-color: $primary;
+  color: $white;
+  padding: 10px 0;
+  text-align: right;
+  ul {
+    li {
+      display: inline-block;
+      border-right: 1px solid $white;
+      margin-right: 10px;
+      padding-right: 10px;
+      font-size: 0.8rem;
+      &:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  i {
+    margin-right: 10px;
+  }
+}
+
+/**************
+navbar
+**************/
+nav {
+  padding: 10px 0;
+  article {
+    @include flex($y: center);
+  }
+  .navbar {
+    li {
+      display: inline-block;
+      margin-left: 30px;
+      font-weight: 700;
+      color: $gray;
+      i {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+/**************
+header
+**************/
+header {
+  @include flex(center, center, column);
+  position: relative;
+  height: 60vh;
+  img {
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    inset: 0;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+  }
+  article {
+    color: $white;
+    z-index: 2;
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 3rem;
+  }
+  article {
+    div {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  .btn:first-child {
+    margin-right: 10px;
+  }
+}
+
+/**************
+services 
+**************/
+
+.services {
+  @include flex;
+  article {
+    position: relative;
+    // flex-grow: 0;
+    // flex-shrink: 0;
+    // flex-basis: 32%;
+    flex: 0 0 32%;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      h3 {
+        transform: translateY(100%);
+      }
+      div {
+        transform: translateY(-100%);
+      }
+    }
+    h3 {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba($primary, 0.8);
+      width: 100%;
+      color: $white;
+      padding: 5px;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      transition: transform $transition;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  div {
+    @include flex(flex-start, flex-start, column);
+    position: absolute;
+    background-color: rgba($primary, 0.8);
+    color: $white;
+    top: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: transform $transition;
+    p {
+      flex: 1;
+    }
+  }
+}
+
+/**************
+features
+**************/
+
+.features {
+  background-color: $lightGray;
+  article:not(:first-child) {
+    @include flex;
+    padding-top: 60px;
+    .wrapper {
+      flex: 0 0 23%;
+      min-width: 200px;
+      background-color: $white;
+      border: 1px solid $gray;
+      border-radius: 5px;
+      padding: 0 20px 20px;
+      text-align: center;
+    }
+    h6 {
+      font-size: 1.2rem;
+    }
+    p {
+      margin-top: 10px;
+    }
+    .icon {
+      display: block;
+      font-size: 2rem;
+      height: 2em;
+      width: 2em;
+      margin: 0 auto;
+      color: $white;
+      position: relative;
+      line-height: 2em;
+      margin-top: -1em;
+      margin-bottom: 30px;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $primary;
+        inset: 0;
+        border-radius: 10px;
+        transform: rotate(45deg);
+      }
+      i {
+        position: relative;
+      }
+    }
+  }
+}
+
+/**************
+courses
+**************/
+
+.courses {
+  .wrapper {
+    @include flex;
+    margin-top: 40px;
+    & > .btn {
+      margin: 0 auto;
+    }
+    .card {
+      flex: 0 0 23%;
+    }
+  }
+}
+
+/**************
+news
+**************/
+
+.news {
+  .wrapper {
+    @include flex;
+    margin-top: 50px;
+    .card {
+      flex: 0 0 32%;
+      h6 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

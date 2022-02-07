@@ -63,6 +63,190 @@
     </header>
 
 
+    <!-------- services -------->
+    <section class="services container py">
+        <article>
+            <img src="img/services-01.jpg" alt="">
+            <h3><i class="fas fa-car"></i> Learn to drive</h3>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aut facilis iste eligendi fugit ea
+                    facere suscipit quos vero quod.</p>
+                <a href="courses.php"><i class="fas fa-caret-right"></i> Read more</a>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/services-02.jpg" alt="">
+            <h3><i class="fas fa-car"></i> Learn to drive</h3>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aut facilis iste eligendi fugit ea
+                    facere suscipit quos vero quod.</p>
+                <a href="courses.php"><i class="fas fa-caret-right"></i> Read more</a>
+            </div>
+        </article>
+
+        <article>
+            <img src="img/services-03.jpg" alt="">
+            <h3><i class="fas fa-car"></i> Learn to drive</h3>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aut facilis iste eligendi fugit ea
+                    facere suscipit quos vero quod.</p>
+                <a href="courses.php"><i class="fas fa-caret-right"></i> Read more</a>
+            </div>
+        </article>
+    </section>
+
+
+    <!-------- features -------->
+    <section class="features py">
+        <article class="title-section container">
+            <h2>our faetures</h2>
+        </article>
+
+        <article class="container">
+            <div class="wrapper">
+                <div class="icon">
+                    <i class="fas fa-film"></i>
+                </div>
+                <h6>INSTRUCTIONAL VIDEO</h6>
+                <p>Morbi efficitur tellus sapien, non feugiat ligula fringilla in. Morbi scelerisque placerat porta.
+                    Vivamus commodo consectetur commodo.</p>
+            </div>
+
+            <div class="wrapper">
+                <div class="icon">
+                    <i class="fas fa-hand-point-right"></i>
+                </div>
+                <h6>INSTRUCTIONAL VIDEO</h6>
+                <p>Morbi efficitur tellus sapien, non feugiat ligula fringilla in. Morbi scelerisque placerat porta.
+                    Vivamus commodo consectetur commodo.</p>
+            </div>
+
+            <div class="wrapper">
+                <div class="icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h6>INSTRUCTIONAL VIDEO</h6>
+                <p>Morbi efficitur tellus sapien, non feugiat ligula fringilla in. Morbi scelerisque placerat porta.
+                    Vivamus commodo consectetur commodo.</p>
+            </div>
+
+            <div class="wrapper">
+                <div class="icon">
+                    <i class="fas fa-address-card"></i>
+                </div>
+                <h6>INSTRUCTIONAL VIDEO</h6>
+                <p>Morbi efficitur tellus sapien, non feugiat ligula fringilla in. Morbi scelerisque placerat porta.
+                    Vivamus commodo consectetur commodo.</p>
+            </div>
+
+        </article>
+    </section>
+
+
+    <!-------- courses -------->
+
+    <section class="courses container py">
+        <article class="title-section container">
+            <h2>our courses</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, qui?</p>
+        </article>
+        <article class="wrapper">
+            <div class="card">
+                <img src="img/course-01.jpg" alt="">
+                <div class="card-body">
+                    <span>Driving, Road Signs</span>
+                    <h6>Rules and requirements</h6>
+                    <h6>&dollar; 100</h6>
+                    <a href="courses_single.php" class="btn">detail</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/course-02.jpg" alt="">
+                <div class="card-body">
+                    <span>Driving, Road Signs</span>
+                    <h6>Rules and requirements</h6>
+                    <h6>&dollar; 100</h6>
+                    <a href="courses_single.php" class="btn">detail</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/course-03.jpg" alt="">
+                <div class="card-body">
+                    <span>Driving, Road Signs</span>
+                    <h6>Rules and requirements</h6>
+                    <h6>&dollar; 100</h6>
+                    <a href="courses_single.php" class="btn">detail</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/course-04.jpg" alt="">
+                <div class="card-body">
+                    <span>Driving, Road Signs</span>
+                    <h6>Rules and requirements</h6>
+                    <h6>&dollar; 100</h6>
+                    <a href="courses_single.php" class="btn">detail</a>
+                </div>
+            </div>
+        </article>
+        <article class="wrapper">
+            <a href="courses.php" class="btn">All Courses</a>
+        </article>
+
+    </section>
+
+
+    <!-- CTA -->
+
+
+    <!-------- news -------->
+    <section class="news container py">
+        <article class="title-section container">
+            <h2>latest news</h2>
+        </article>
+        <article class="wrapper">
+            <div class="card">
+                <img src="img/news-01.jpg" alt="">
+                <div class="card-body">
+                    <h6>Trainee licence option with 20 hours training</h6>
+                    <span>July 18, 2017 | Pro Tips</span>
+                    <p>
+                        Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget
+                        tortor tempor, quis porta tellus dictum. </p>
+                    <a href="courses_single.php" class="btn">Continue reading</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/news-02.jpg" alt="">
+                <div class="card-body">
+                    <h6>Trainee licence option with 20 hours training</h6>
+                    <span>July 18, 2017 | Pro Tips</span>
+                    <p>
+                        Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget
+                        tortor tempor, quis porta tellus dictum. </p>
+                    <a href="courses_single.php" class="btn">Continue reading</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/news-03.jpg" alt="">
+                <div class="card-body">
+                    <h6>Trainee licence option with 20 hours training</h6>
+                    <span>July 18, 2017 | Pro Tips</span>
+                    <p>
+                        Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget
+                        tortor tempor, quis porta tellus dictum. </p>
+                    <a href="courses_single.php" class="btn">Continue reading</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
 
 </body>
 
