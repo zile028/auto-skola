@@ -141,6 +141,38 @@ nav {
         margin-left: 30px;
       }
     }
+    .drop {
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        & > ul {
+          transform: scale(1);
+        }
+      }
+      span::after {
+        content: "\f0d7";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900px;
+        margin-left: 5px;
+      }
+      ul {
+        transform: scale(0);
+        transform-origin: left top;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $white;
+        padding: 0 10px 10px;
+        min-width: 150px;
+        z-index: 2;
+        transition: transform $transition;
+        li {
+          width: 100%;
+          padding: 10px;
+          margin: 0;
+        }
+      }
+    }
   }
 }
 
@@ -320,6 +352,194 @@ news
       flex: 0 0 32%;
       h6 {
         font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+/**************
+cta
+**************/
+.cta {
+  background: linear-gradient(rgba($black, 0.8), rgba($black, 0.8)),
+    url("img/testimonial-bg-01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $white;
+
+  form {
+    margin-top: 40px;
+    text-align: center;
+    div {
+      @include flex;
+    }
+    input {
+      flex: 0 0 23%;
+      padding: 15px;
+      font-family: $textFont;
+      font-size: 1rem;
+    }
+    button {
+      outline: transparent;
+      border: transparent;
+      margin: 30px 0 0;
+      font-size: 1.2rem;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+/**************
+map
+**************/
+
+.map {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba($black, 0.8), rgba($black, 0.8));
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+/**************
+footer
+**************/
+
+footer {
+  background-color: $darkGray;
+  color: $white;
+  article {
+    padding: 50px 0;
+    &:first-child {
+      @include flex;
+    }
+    &:last-child {
+      background-color: $black;
+      text-align: center;
+      padding: 30px 0;
+    }
+    div {
+      &:first-child {
+        flex: 0 0 48%;
+        p {
+          line-height: 2;
+        }
+      }
+      h3 {
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+      img {
+        margin-bottom: 20px;
+      }
+      li {
+        line-height: 1.9;
+      }
+    }
+  }
+}
+
+/**************
+single page
+**************/
+
+.single {
+  @include flex;
+  article {
+    @include flex;
+    flex: 1;
+    h2 {
+      text-transform: uppercase;
+      font-size: 2rem;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    iframe {
+      height: 450px;
+      margin: 20px 0;
+    }
+    p {
+      margin: 20px 0;
+      line-height: 1.7;
+    }
+    ul {
+      margin-bottom: 20px;
+      li {
+        line-height: 1.7;
+        &::before {
+          content: "\f0a4";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: $primary;
+          margin-right: 5px;
+        }
+      }
+    }
+    .feature {
+      border-left: 5px solid $gray;
+      padding: 30px 0 30px 30px;
+    }
+    .card {
+      flex: 0 0 48%;
+      margin-bottom: 30px;
+    }
+  }
+  aside {
+    flex: 0 0 25%;
+    margin-left: 30px;
+  }
+  .categories {
+    h3 {
+      text-transform: uppercase;
+    }
+    ul {
+      margin-top: 30px;
+      li {
+        line-height: 2.5;
+        border-top: 1px solid $gray;
+        &:last-child {
+          border-bottom: 1px solid $gray;
+        }
+      }
+    }
+  }
+}
+
+/**************
+intro
+**************/
+
+.intro {
+  @include flex;
+  article {
+    flex: 0 0 48%;
+    .title-section {
+      text-align: left;
+      h2 {
+        &::after {
+          margin: 10px 0;
+        }
+      }
+    }
+    ul {
+      margin-top: 20px;
+      li {
+        line-height: 1.7;
+        &::before {
+          content: "\f058";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: $primary;
+          margin-right: 5px;
+        }
       }
     }
   }

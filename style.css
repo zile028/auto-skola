@@ -168,6 +168,41 @@ nav .navbar li i {
   margin-left: 30px;
 }
 
+nav .navbar .drop {
+  position: relative;
+  cursor: pointer;
+}
+
+nav .navbar .drop:hover > ul {
+  transform: scale(1);
+}
+
+nav .navbar .drop span::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900px;
+  margin-left: 5px;
+}
+
+nav .navbar .drop ul {
+  transform: scale(0);
+  transform-origin: left top;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  padding: 0 10px 10px;
+  min-width: 150px;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+nav .navbar .drop ul li {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+
 /**************
 header
 **************/
@@ -377,4 +412,234 @@ news
 
 .news .wrapper .card h6 {
   font-size: 1.3rem;
+}
+
+/**************
+cta
+**************/
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/testimonial-bg-01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.cta form {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta form div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.cta form input {
+  flex: 0 0 23%;
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.cta form button {
+  outline: transparent;
+  border: transparent;
+  margin: 30px 0 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/**************
+map
+**************/
+.map {
+  position: relative;
+}
+
+.map::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.map iframe {
+  width: 100%;
+}
+
+/**************
+footer
+**************/
+footer {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+footer article {
+  padding: 50px 0;
+}
+
+footer article:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+footer article:last-child {
+  background-color: #000;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer article div:first-child {
+  flex: 0 0 48%;
+}
+
+footer article div:first-child p {
+  line-height: 2;
+}
+
+footer article div h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+footer article div img {
+  margin-bottom: 20px;
+}
+
+footer article div li {
+  line-height: 1.9;
+}
+
+/**************
+single page
+**************/
+.single {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.single article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex: 1;
+}
+
+.single article h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.single article iframe {
+  height: 450px;
+  margin: 20px 0;
+}
+
+.single article p {
+  margin: 20px 0;
+  line-height: 1.7;
+}
+
+.single article ul {
+  margin-bottom: 20px;
+}
+
+.single article ul li {
+  line-height: 1.7;
+}
+
+.single article ul li::before {
+  content: "\f0a4";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #233785;
+  margin-right: 5px;
+}
+
+.single article .feature {
+  border-left: 5px solid #808080;
+  padding: 30px 0 30px 30px;
+}
+
+.single article .card {
+  flex: 0 0 48%;
+  margin-bottom: 30px;
+}
+
+.single aside {
+  flex: 0 0 25%;
+  margin-left: 30px;
+}
+
+.single .categories h3 {
+  text-transform: uppercase;
+}
+
+.single .categories ul {
+  margin-top: 30px;
+}
+
+.single .categories ul li {
+  line-height: 2.5;
+  border-top: 1px solid #808080;
+}
+
+.single .categories ul li:last-child {
+  border-bottom: 1px solid #808080;
+}
+
+/**************
+intro
+**************/
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.intro article {
+  flex: 0 0 48%;
+}
+
+.intro article .title-section {
+  text-align: left;
+}
+
+.intro article .title-section h2::after {
+  margin: 10px 0;
+}
+
+.intro article ul {
+  margin-top: 20px;
+}
+
+.intro article ul li {
+  line-height: 1.7;
+}
+
+.intro article ul li::before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #233785;
+  margin-right: 5px;
 }
