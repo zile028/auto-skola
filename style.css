@@ -19,6 +19,11 @@ body {
   color: #000;
 }
 
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
 ul {
   list-style: none;
 }
@@ -56,6 +61,7 @@ a:hover {
   font-weight: 700;
   transition: 0.4s ease;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn.btnLight {
@@ -95,10 +101,49 @@ a:hover {
   border: 1px solid #808080;
 }
 
+.card.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 30px;
+}
+
+.card.row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.card.row:nth-child(even) img {
+  order: 1;
+}
+
+.card.row:nth-child(even) .card-body {
+  text-align: left;
+}
+
+.card.row img {
+  max-width: 320px;
+}
+
+.card.row .card-body {
+  text-align: right;
+}
+
 .card-body {
   flex: 1;
   width: 100%;
   padding: 10px;
+}
+
+.card-body h4 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.card-body h5 {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .card-body h6 {
@@ -108,6 +153,11 @@ a:hover {
 
 .card-body .btn {
   margin-top: 20px;
+}
+
+.card-body i {
+  font-size: 1.2rem;
+  margin: 10px 10px 10px 0;
 }
 
 .card img {
@@ -232,6 +282,7 @@ header img {
 header article {
   color: #ffffff;
   z-index: 2;
+  text-align: center;
 }
 
 header h1 {
@@ -377,12 +428,19 @@ features
 /**************
 courses
 **************/
+.courses .title-section {
+  margin-bottom: 40px;
+}
+
 .courses .wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+}
+
+.courses .wrapper:last-child {
   margin-top: 40px;
 }
 
@@ -574,13 +632,8 @@ single page
 }
 
 .single article .feature {
-  border-left: 5px solid #808080;
-  padding: 30px 0 30px 30px;
-}
-
-.single article .card {
-  flex: 0 0 48%;
-  margin-bottom: 30px;
+  border-left: 5px solid rgba(128, 128, 128, 0.5);
+  padding-left: 30px;
 }
 
 .single aside {
@@ -603,6 +656,19 @@ single page
 
 .single .categories ul li:last-child {
   border-bottom: 1px solid #808080;
+}
+
+.single .news .card {
+  flex: 0 0 48%;
+  margin-bottom: 30px;
+}
+
+.single-courses .card {
+  width: 100%;
+}
+
+.single-courses .card h6 span {
+  font-weight: 400;
 }
 
 /**************
@@ -642,4 +708,115 @@ intro
   font-weight: 900;
   color: #233785;
   margin-right: 5px;
+}
+
+/**************
+teachers
+**************/
+.teachers .row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 50px;
+}
+
+.teachers .row .card {
+  flex: 0 0 24%;
+}
+
+/**************
+gallery
+**************/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.gallery article {
+  flex: 0 0 32%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery article:hover img {
+  transform: scale(110%);
+}
+
+.gallery article img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/**************
+contact
+**************/
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.contact article:first-child {
+  flex: 1;
+}
+
+.contact article:last-child {
+  flex: 0 0 38%;
+  margin-left: 2%;
+}
+
+.contact article h3 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #233785;
+  font-size: 2rem;
+}
+
+.contact article form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.contact article form input {
+  flex: 0 0 32%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.contact article form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  flex: 0 0 100%;
+}
+
+.contact article form button {
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.contact article ul {
+  margin-top: 20px;
+}
+
+.contact article ul li {
+  line-height: 1.8;
+}
+
+.contact article ul li i {
+  margin-right: 5px;
+  color: #233785;
 }

@@ -14,6 +14,10 @@ body {
   font-weight: 400;
   color: $black;
 }
+input,
+textarea {
+  font-family: $textFont;
+}
 ul {
   list-style: none;
 }
@@ -48,6 +52,7 @@ a {
   font-weight: 700;
   transition: $transition;
   border-radius: 5px;
+  cursor: pointer;
   &.btnLight {
     background-color: $white;
     color: $black;
@@ -76,11 +81,37 @@ a {
 .card {
   @include flex(center, space-between, column);
   border: 1px solid $gray;
-
+  &.row {
+    @include flex;
+    margin-bottom: 30px;
+    &:nth-child(even) {
+      background-color: $lightGray;
+      img {
+        order: 1;
+      }
+      .card-body {
+        text-align: left;
+      }
+    }
+    img {
+      max-width: 320px;
+    }
+    .card-body {
+      text-align: right;
+    }
+  }
   &-body {
     flex: 1;
     width: 100%;
     padding: 10px;
+    h4 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
     h6 {
       line-height: 2rem;
       font-size: 1.1rem;
@@ -88,6 +119,10 @@ a {
 
     .btn {
       margin-top: 20px;
+    }
+    i {
+      font-size: 1.2rem;
+      margin: 10px 10px 10px 0;
     }
   }
   img {
@@ -199,6 +234,7 @@ header {
   article {
     color: $white;
     z-index: 2;
+    text-align: center;
   }
 
   h1 {
@@ -328,9 +364,14 @@ courses
 **************/
 
 .courses {
+  .title-section {
+    margin-bottom: 40px;
+  }
   .wrapper {
     @include flex;
-    margin-top: 40px;
+    &:last-child {
+      margin-top: 40px;
+    }
     & > .btn {
       margin: 0 auto;
     }
@@ -484,12 +525,8 @@ single page
       }
     }
     .feature {
-      border-left: 5px solid $gray;
-      padding: 30px 0 30px 30px;
-    }
-    .card {
-      flex: 0 0 48%;
-      margin-bottom: 30px;
+      border-left: 5px solid rgba($gray, 0.5);
+      padding-left: 30px;
     }
   }
   aside {
@@ -507,6 +544,22 @@ single page
         border-top: 1px solid $gray;
         &:last-child {
           border-bottom: 1px solid $gray;
+        }
+      }
+    }
+  }
+  .news {
+    .card {
+      flex: 0 0 48%;
+      margin-bottom: 30px;
+    }
+  }
+  &-courses {
+    .card {
+      width: 100%;
+      h6 {
+        span {
+          font-weight: 400;
         }
       }
     }
@@ -539,6 +592,97 @@ intro
           font-weight: 900;
           color: $primary;
           margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+/**************
+teachers
+**************/
+
+.teachers {
+  .row {
+    @include flex;
+    margin-top: 50px;
+    .card {
+      flex: 0 0 24%;
+    }
+  }
+}
+
+/**************
+gallery
+**************/
+
+.gallery {
+  @include flex($x: space-around);
+  article {
+    flex: 0 0 32%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(110%);
+      }
+    }
+    img {
+      width: 100%;
+      display: block;
+      transition: transform $transition;
+    }
+  }
+}
+
+/**************
+contact
+**************/
+
+.contact {
+  @include flex;
+  article {
+    &:first-child {
+      flex: 1;
+    }
+    &:last-child {
+      flex: 0 0 38%;
+      margin-left: 2%;
+    }
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      color: $primary;
+      font-size: 2rem;
+    }
+
+    form {
+      @include flex;
+      input {
+        flex: 0 0 32%;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        flex: 0 0 100%;
+      }
+      button {
+        outline: none;
+        border: none;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+    }
+    ul {
+      margin-top: 20px;
+      li {
+        line-height: 1.8;
+        i {
+          margin-right: 5px;
+          color: $primary;
         }
       }
     }

@@ -39,8 +39,8 @@
                     <li class="drop"><span>About</span>
                         <ul>
                             <li><a href="intro.php">Intro</a></li>
-                            <li><a href="teachres.php">Teachers</a></li>
-                            <li><a href="garllery.php">Gallery</a></li>
+                            <li><a href="teachers.php">Teachers</a></li>
+                            <li><a href="gallery.php">Gallery</a></li>
                         </ul>
                     </li>
 

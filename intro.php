@@ -35,5 +35,8 @@
     </article>
 </section>
 
+<!-------- features -------->
+<?php include "partials/features.php" ?>
+
 <!-------- footer -------->
 <?php include "partials/footer.php" ?>
