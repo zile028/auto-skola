@@ -11,6 +11,7 @@
 
 <section class="single container py">
     <article class="news">
+
         <div class="card">
             <img src="img/news-01.jpg" alt="">
             <div class="card-body">

@@ -10,7 +10,7 @@
 </header>
 
 <section class="single container py">
-    <article>
+    <article class="single-teacher">
         <h2>Philip Barnett</h2>
         <cite>Chief Executive Officer</cite>
         <p>Nulla commodo iaculis ligula, ac dapibus quam ornare ut. Praesent ac hendrerit sem, et tempus sem. Donec sit

@@ -39,9 +39,15 @@ a {
   margin-left: 0; */
   /* margin:0 auto 0 auto; */
   margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 .py {
   padding: 140px 0;
+  @media (max-width: 768px) {
+    padding: 80px 0;
+  }
 }
 .btn {
   display: inline-block;
@@ -88,6 +94,9 @@ a {
       background-color: $lightGray;
       img {
         order: 1;
+        @media (max-width: 768px) {
+          order: unset;
+        }
       }
       .card-body {
         text-align: left;
@@ -95,9 +104,16 @@ a {
     }
     img {
       max-width: 320px;
+      @media (max-width: 768px) {
+        max-width: unset;
+        width: 100%;
+      }
     }
     .card-body {
       text-align: right;
+      @media (max-width: 768px) {
+        text-align: left;
+      }
     }
   }
   &-body {
@@ -138,6 +154,9 @@ top-bar
   color: $white;
   padding: 10px 0;
   text-align: right;
+  @media (max-width: 768px) {
+    display: none;
+  }
   ul {
     li {
       display: inline-block;
@@ -163,17 +182,57 @@ navbar
 **************/
 nav {
   padding: 10px 0;
+  position: relative;
   article {
     @include flex($y: center);
   }
+  .nav-btn {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
+    button {
+      outline: none;
+      border: none;
+      background: transparent;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
   .navbar {
+    @media (max-width: 768px) {
+      max-height: 0;
+      overflow-y: auto;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      background-color: $white;
+      z-index: 10;
+      top: 100%;
+      transition: $transition;
+    }
+    & > ul {
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+
     li {
       display: inline-block;
       margin-left: 30px;
       font-weight: 700;
       color: $gray;
+      @media (max-width: 768px) {
+        display: block;
+        margin-left: 0;
+        padding: 10px 15px;
+      }
       i {
         margin-left: 30px;
+        @media (max-width: 768px) {
+          margin-left: 0px;
+          margin-right: 20px;
+        }
       }
     }
     .drop {
@@ -201,6 +260,13 @@ nav {
         min-width: 150px;
         z-index: 2;
         transition: transform $transition;
+        @media (max-width: 768px) {
+          transform: scale(1);
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height $transition;
+          position: relative;
+        }
         li {
           width: 100%;
           padding: 10px;
@@ -225,7 +291,6 @@ header {
     right: 0;
     bottom: 0; */
     inset: 0;
-
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -251,6 +316,9 @@ header {
   }
   .btn:first-child {
     margin-right: 10px;
+    @media (max-width: 768px) {
+      margin: 0 10px 10px;
+    }
   }
 }
 
@@ -268,6 +336,10 @@ services
     flex: 0 0 32%;
     overflow: hidden;
     cursor: pointer;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
     &:hover {
       h3 {
         transform: translateY(100%);
@@ -325,6 +397,13 @@ features
       border-radius: 5px;
       padding: 0 20px 20px;
       text-align: center;
+      @media (max-width: 768px) {
+        flex: 0 0 49%;
+        margin-top: 50px;
+      }
+      @media (max-width: 450px) {
+        flex: 0 0 100%;
+      }
     }
     h6 {
       font-size: 1.2rem;
@@ -377,6 +456,13 @@ courses
     }
     .card {
       flex: 0 0 23%;
+      @media (max-width: 768px) {
+        flex: 0 0 49%;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 450px) {
+        flex: 0 0 100%;
+      }
     }
   }
 }
@@ -391,6 +477,13 @@ news
     margin-top: 50px;
     .card {
       flex: 0 0 32%;
+      @media (max-width: 768px) {
+        flex: 0 0 49%;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 450px) {
+        flex: 0 0 100%;
+      }
       h6 {
         font-size: 1.3rem;
       }
@@ -420,6 +513,10 @@ cta
       padding: 15px;
       font-family: $textFont;
       font-size: 1rem;
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+      }
     }
     button {
       outline: transparent;
@@ -468,8 +565,17 @@ footer {
       padding: 30px 0;
     }
     div {
+      @media (max-width: 768px) {
+        flex: 0 0 49%;
+        margin-bottom: 20px;
+      }
+
       &:first-child {
         flex: 0 0 48%;
+        @media (max-width: 768px) {
+          flex: 0 0 100%;
+          margin-bottom: 20px;
+        }
         p {
           line-height: 2;
         }
@@ -532,6 +638,11 @@ single page
   aside {
     flex: 0 0 25%;
     margin-left: 30px;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
   }
   .categories {
     h3 {
@@ -552,7 +663,14 @@ single page
     .card {
       flex: 0 0 48%;
       margin-bottom: 30px;
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+      }
     }
+  }
+  &-teacher {
+    order: 2;
+    margin-top: 20px;
   }
   &-courses {
     .card {
@@ -574,6 +692,10 @@ intro
   @include flex;
   article {
     flex: 0 0 48%;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
     .title-section {
       text-align: left;
       h2 {
@@ -608,6 +730,9 @@ teachers
     margin-top: 50px;
     .card {
       flex: 0 0 24%;
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+      }
     }
   }
 }
@@ -623,6 +748,9 @@ gallery
     margin-bottom: 20px;
     cursor: pointer;
     overflow: hidden;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+    }
     &:hover {
       img {
         transform: scale(110%);
@@ -649,6 +777,11 @@ contact
     &:last-child {
       flex: 0 0 38%;
       margin-left: 2%;
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+        margin-left: 0;
+        margin-top: 30px;
+      }
     }
     h3 {
       text-transform: uppercase;
@@ -663,6 +796,9 @@ contact
         flex: 0 0 32%;
         margin-bottom: 20px;
         padding: 10px;
+        @media (max-width: 768px) {
+          flex: 0 0 100%;
+        }
       }
       textarea {
         padding: 10px;
