@@ -7,13 +7,13 @@
         <h1>free video lessons</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur incidunt perspiciatis quo, fuga
             dolor vitae assumenda vel magni eaque natus?</p>
-        <div>
+        <!-- dodata klasa slide-in radi dodavanja animacije -->
+        <div class="slide-in">
             <a class="btn" href="courses.php">our services</a>
             <a class="btn btnLight" href="teachers.php">our teacher</a>
         </div>
     </article>
 </header>
-
 
 <!-------- services -------->
 <section class="services container py">
@@ -48,10 +48,8 @@
     </article>
 </section>
 
-
 <!-------- features -------->
 <?php include "partials/features.php" ?>
-
 
 <!-------- courses -------->
 
@@ -67,7 +65,7 @@
                 <span>Driving, Road Signs</span>
                 <h6>Rules and requirements</h6>
                 <h6>&dollar; 100</h6>
-                <a href="news_single.php" class="btn">detail</a>
+                <a href="courses_single.php" class="btn">detail</a>
             </div>
         </div>
 
@@ -77,7 +75,7 @@
                 <span>Driving, Road Signs</span>
                 <h6>Rules and requirements</h6>
                 <h6>&dollar; 100</h6>
-                <a href="news_single.php" class="btn">detail</a>
+                <a href="courses_single.php" class="btn">detail</a>
             </div>
         </div>
 
@@ -87,7 +85,7 @@
                 <span>Driving, Road Signs</span>
                 <h6>Rules and requirements</h6>
                 <h6>&dollar; 100</h6>
-                <a href="news_single.php" class="btn">detail</a>
+                <a href="courses_single.php" class="btn">detail</a>
             </div>
         </div>
 
@@ -97,7 +95,7 @@
                 <span>Driving, Road Signs</span>
                 <h6>Rules and requirements</h6>
                 <h6>&dollar; 100</h6>
-                <a href="news_single.php" class="btn">detail</a>
+                <a href="courses_single.php" class="btn">detail</a>
             </div>
         </div>
     </article>

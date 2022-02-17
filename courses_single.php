@@ -41,7 +41,7 @@
         </div>
 
     </article>
-    <aside class="categories">
+    <aside>
         <div class="card">
             <img src="img/instructor-01.jpg" alt="">
             <div class="card-body">

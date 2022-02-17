@@ -4,7 +4,7 @@
     <img src="img/bg-title-01.jpg" alt="">
     <article>
         <h1>Teachers</h1>
-        <a class="btn" href="courses.php">Get in touch</a>
+        <a class="btn" href="contact.php">Get in touch</a>
     </article>
 </header>
 

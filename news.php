@@ -5,13 +5,12 @@
     <img src="img/bg-title-01.jpg" alt="">
     <article>
         <h1>News</h1>
-        <a class="btn" href="courses.php">Get in touch</a>
+        <a class="btn" href="contact.php">Get in touch</a>
     </article>
 </header>
 
 <section class="single container py">
     <article class="news">
-
         <div class="card">
             <img src="img/news-01.jpg" alt="">
             <div class="card-body">

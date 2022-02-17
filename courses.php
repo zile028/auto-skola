@@ -4,14 +4,15 @@
     <img src="img/bg-title-01.jpg" alt="">
     <article>
         <h1>Courses</h1>
-        <a class="btn" href="courses.php">Get in touch</a>
+        <a class="btn" href="contact.php">Get in touch</a>
     </article>
 </header>
 <section class="courses container py">
     <article class="title-section">
         <h2>our courses</h2>
     </article>
-    <article>
+    <!-- dodata je klasa courses-page -->
+    <article class="courses-page">
         <div class="card row">
             <img src="img/course-01.jpg" alt="">
             <div class="card-body">

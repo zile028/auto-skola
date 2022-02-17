@@ -9,7 +9,7 @@
 </header>
 
 <section class="single container py">
-    <article class="single-news">
+    <article class="news">
         <h2>Trainee licence option with 20 hours training</h2>
         <cite>Tammy RamosMay 30, 2018Driving</cite>
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/bK36RQxl0F0" title="YouTube video player"

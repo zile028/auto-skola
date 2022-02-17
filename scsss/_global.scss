@@ -46,6 +46,9 @@ a {
 }
 .py {
   padding: 140px 0;
+  @media (max-width: 1300px) {
+    padding: 100px 0;
+  }
   @media (max-width: 768px) {
     padding: 80px 0;
   }
@@ -144,5 +147,52 @@ a {
   }
   img {
     width: 100%;
+  }
+}
+
+/*************
+klasa za dodelu animacije
+*************/
+
+.slide-in {
+  .btn {
+    // ovde su definisana globalna pravila animacije, duzina trajanja animacije i vremenska funkcija koja odredjuje kako animacija napreduje u toku svog ciklusa
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    &:nth-child(1) {
+      // ima animacije koja se dodeljuje elementu
+      animation-name: left-to-right;
+      // transform: translateX(-40vw);
+    }
+    &:nth-child(2) {
+      // ima animacije koja se dodeljuje elementu
+      animation-name: right-to-left;
+    }
+  }
+}
+
+//@keyframes kljucna rec za definisanje animacije
+// left-to-right - naziv animacije, naziv animacije moze biti bilo koja rec
+@keyframes left-to-right {
+  // from - predstavlja pocetno stanje elementa nakon ucitavanja stranice
+  // to - predstavlja zavrsno stanje elementa nakon ucitavanja stranice
+  // vw - relativna jedinica, gde je 100vw = celoj sirini ekrana
+  // -100vw pomera ceo element ulevo i time ga izbacuje iz vizuelnog dela
+  // 100vw pomera ceo element udesno i time ga izbacuje iz vizuelnog dela
+  // 0vw vraca u normalan polozaj element
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0vw);
   }
 }
