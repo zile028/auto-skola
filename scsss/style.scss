@@ -43,6 +43,15 @@ nav {
   article {
     @include flex($y: center);
   }
+  // dodato, da div sa logoom se prosiri na maksimalno dozvoljenu sirinu ali je slika ogranicena na max 300px sirine
+  .logo {
+    flex: 1;
+    margin-right: 10px;
+    img {
+      max-width: 300px;
+      width: 100%;
+    }
+  }
   .nav-btn {
     display: none;
     @media (max-width: 1285px) {
@@ -166,6 +175,10 @@ header {
     text-transform: uppercase;
     margin-bottom: 30px;
     font-size: 3rem;
+    // dodat media query da bi se smanjio font
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
   article {
     div {
