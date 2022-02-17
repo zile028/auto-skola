@@ -1,0 +1,148 @@
+/**************
+global styles
+**************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $textFont;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $black;
+}
+input,
+textarea {
+  font-family: $textFont;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: $primary;
+    transition: color $transition;
+  }
+}
+
+.container {
+  width: 70%;
+  /* margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0; */
+  /* margin:0 auto 0 auto; */
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+.py {
+  padding: 140px 0;
+  @media (max-width: 768px) {
+    padding: 80px 0;
+  }
+}
+.btn {
+  display: inline-block;
+  background-color: $primary;
+  color: $white;
+  padding: 1em 2.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: $transition;
+  border-radius: 5px;
+  cursor: pointer;
+  &.btnLight {
+    background-color: $white;
+    color: $black;
+  }
+  &:hover {
+    color: $white;
+    background-color: $darkPrimary;
+  }
+}
+
+.title-section {
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    &::after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 70px;
+      background-color: $primary;
+      margin: 10px auto;
+    }
+  }
+}
+.card {
+  @include flex(center, space-between, column);
+  border: 1px solid $gray;
+  &.row {
+    @include flex;
+    margin-bottom: 30px;
+    &:nth-child(even) {
+      background-color: $lightGray;
+      img {
+        order: 1;
+        @media (max-width: 768px) {
+          order: unset;
+        }
+      }
+      .card-body {
+        text-align: left;
+      }
+    }
+    img {
+      max-width: 320px;
+      @media (max-width: 768px) {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+    .card-body {
+      text-align: right;
+      @media (max-width: 768px) {
+        text-align: left;
+      }
+    }
+  }
+  &-body {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    h4 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    h6 {
+      line-height: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+    i {
+      font-size: 1.2rem;
+      margin: 10px 10px 10px 0;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}

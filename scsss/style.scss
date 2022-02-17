@@ -1,150 +1,6 @@
 @import "var";
 @import "mixin";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $textFont;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: $black;
-}
-input,
-textarea {
-  font-family: $textFont;
-}
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  &:hover {
-    color: $primary;
-    transition: color $transition;
-  }
-}
-
-.container {
-  width: 70%;
-  /* margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0; */
-  /* margin:0 auto 0 auto; */
-  margin: 0 auto;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-}
-.py {
-  padding: 140px 0;
-  @media (max-width: 768px) {
-    padding: 80px 0;
-  }
-}
-.btn {
-  display: inline-block;
-  background-color: $primary;
-  color: $white;
-  padding: 1em 2.5em;
-  text-transform: uppercase;
-  font-weight: 700;
-  transition: $transition;
-  border-radius: 5px;
-  cursor: pointer;
-  &.btnLight {
-    background-color: $white;
-    color: $black;
-  }
-  &:hover {
-    color: $white;
-    background-color: $darkPrimary;
-  }
-}
-
-.title-section {
-  text-align: center;
-  h2 {
-    text-transform: uppercase;
-    font-size: 2rem;
-    &::after {
-      content: "";
-      display: block;
-      height: 5px;
-      width: 70px;
-      background-color: $primary;
-      margin: 10px auto;
-    }
-  }
-}
-.card {
-  @include flex(center, space-between, column);
-  border: 1px solid $gray;
-  &.row {
-    @include flex;
-    margin-bottom: 30px;
-    &:nth-child(even) {
-      background-color: $lightGray;
-      img {
-        order: 1;
-        @media (max-width: 768px) {
-          order: unset;
-        }
-      }
-      .card-body {
-        text-align: left;
-      }
-    }
-    img {
-      max-width: 320px;
-      @media (max-width: 768px) {
-        max-width: unset;
-        width: 100%;
-      }
-    }
-    .card-body {
-      text-align: right;
-      @media (max-width: 768px) {
-        text-align: left;
-      }
-    }
-  }
-  &-body {
-    flex: 1;
-    width: 100%;
-    padding: 10px;
-    h4 {
-      font-size: 1.3rem;
-      text-transform: uppercase;
-    }
-    h5 {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-    h6 {
-      line-height: 2rem;
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      margin-top: 20px;
-    }
-    i {
-      font-size: 1.2rem;
-      margin: 10px 10px 10px 0;
-    }
-  }
-  img {
-    width: 100%;
-  }
-}
+@import "global";
 
 /**************
 top-bar
@@ -180,6 +36,7 @@ top-bar
 /**************
 navbar
 **************/
+//promenjena je sirina (sa 768px na 1285px) na kojoj se pojavljuje hamburger menu, jer ispod ove se raspada
 nav {
   padding: 10px 0;
   position: relative;
@@ -188,7 +45,7 @@ nav {
   }
   .nav-btn {
     display: none;
-    @media (max-width: 768px) {
+    @media (max-width: 1285px) {
       display: block;
     }
     button {
@@ -200,7 +57,7 @@ nav {
     }
   }
   .navbar {
-    @media (max-width: 768px) {
+    @media (max-width: 1285px) {
       max-height: 0;
       overflow-y: auto;
       position: absolute;
@@ -212,7 +69,7 @@ nav {
       transition: $transition;
     }
     & > ul {
-      @media (max-width: 768px) {
+      @media (max-width: 1285px) {
         display: block;
       }
     }
@@ -222,14 +79,14 @@ nav {
       margin-left: 30px;
       font-weight: 700;
       color: $gray;
-      @media (max-width: 768px) {
+      @media (max-width: 1285px) {
         display: block;
         margin-left: 0;
         padding: 10px 15px;
       }
       i {
         margin-left: 30px;
-        @media (max-width: 768px) {
+        @media (max-width: 1285px) {
           margin-left: 0px;
           margin-right: 20px;
         }
@@ -260,7 +117,7 @@ nav {
         min-width: 150px;
         z-index: 2;
         transition: transform $transition;
-        @media (max-width: 768px) {
+        @media (max-width: 1285px) {
           transform: scale(1);
           max-height: 0;
           overflow: hidden;
@@ -283,7 +140,9 @@ header
 header {
   @include flex(center, center, column);
   position: relative;
-  height: 60vh;
+  //promenjeno sa height na min-height i dodat padding, ako se ostavi height onda je fiksirana visina, na ovaj nacin na manjim ekranima moze se prosiriti a padding nam obezbedjuje da sadrzaj ne ide od ivice do ivice
+  min-height: 60vh;
+  padding: 20px;
   img {
     position: absolute;
     /* top: 0;
@@ -397,7 +256,8 @@ features
       border-radius: 5px;
       padding: 0 20px 20px;
       text-align: center;
-      @media (max-width: 768px) {
+      // promena sa 768px na 1200px
+      @media (max-width: 1200px) {
         flex: 0 0 49%;
         margin-top: 50px;
       }
@@ -456,7 +316,8 @@ courses
     }
     .card {
       flex: 0 0 23%;
-      @media (max-width: 768px) {
+      // promena sa 768px na 1200px
+      @media (max-width: 1200px) {
         flex: 0 0 49%;
         margin-bottom: 20px;
       }
@@ -477,7 +338,8 @@ news
     margin-top: 50px;
     .card {
       flex: 0 0 32%;
-      @media (max-width: 768px) {
+      // promena sa 768px na 1200px
+      @media (max-width: 1200px) {
         flex: 0 0 49%;
         margin-bottom: 20px;
       }
@@ -513,9 +375,13 @@ cta
       padding: 15px;
       font-family: $textFont;
       font-size: 1rem;
+      // dodat jos jedan media query a margin-botom prebacen u gornji jer za svaku manju sirinu ekrana nasledjuje iz veceg
+      @media (max-width: 1490px) {
+        flex: 0 0 49%;
+        margin-bottom: 20px;
+      }
       @media (max-width: 768px) {
         flex: 0 0 100%;
-        margin-bottom: 20px;
       }
     }
     button {
@@ -572,7 +438,8 @@ footer {
 
       &:first-child {
         flex: 0 0 48%;
-        @media (max-width: 768px) {
+        // promena sa 768px na 1160px
+        @media (max-width: 1160px) {
           flex: 0 0 100%;
           margin-bottom: 20px;
         }
@@ -589,6 +456,10 @@ footer {
       }
       li {
         line-height: 1.9;
+        // dodato da bi ikonice odvojili od teksta
+        i {
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -692,7 +563,8 @@ intro
   @include flex;
   article {
     flex: 0 0 48%;
-    @media (max-width: 768px) {
+    // promena sa 768px na 1400px
+    @media (max-width: 1400px) {
       flex: 0 0 100%;
       margin-bottom: 20px;
     }
