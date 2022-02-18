@@ -298,6 +298,34 @@ klasa za dodelu animacije
   }
 }
 
+.rotate-icon {
+  display: block;
+  font-size: 2rem;
+  height: 2em;
+  width: 2em;
+  margin: 0 auto;
+  color: #ffffff;
+  position: relative;
+  line-height: 2em;
+  text-align: center;
+}
+
+.rotate-icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #233785;
+  inset: 0;
+  border-radius: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.rotate-icon a,
+.rotate-icon i {
+  position: relative;
+}
+
 /**************
 top-bar
 **************/
@@ -743,32 +771,9 @@ features
   margin-top: 10px;
 }
 
-.features article:not(:first-child) .icon {
-  display: block;
-  font-size: 2rem;
-  height: 2em;
-  width: 2em;
-  margin: 0 auto;
-  color: #ffffff;
-  position: relative;
-  line-height: 2em;
-  margin-top: -1em;
+.features article:not(:first-child) .rotate-icon {
   margin-bottom: 30px;
-}
-
-.features article:not(:first-child) .icon::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #233785;
-  inset: 0;
-  border-radius: 10px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.features article:not(:first-child) .icon i {
-  position: relative;
+  margin-top: -1em;
 }
 
 /**************
@@ -986,12 +991,68 @@ map
   display: block;
   position: absolute;
   inset: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8)));
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .map iframe {
   width: 100%;
+}
+
+.map .rotate-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.map .rotate-icon a {
+  display: block;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.map .rotate-icon:hover a {
+  -webkit-animation-name: jumping;
+          animation-name: jumping;
+  color: #ffffff;
+}
+
+@-webkit-keyframes jumping {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@keyframes jumping {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
 }
 
 /**************

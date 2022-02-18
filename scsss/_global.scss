@@ -198,3 +198,29 @@ klasa za dodelu animacije
     transform: translateX(0vw);
   }
 }
+
+// ovaj deo je prebacen ovde iz features da bi je koristio globalno, odnosno da je mogu koristiti u sekciji map
+.rotate-icon {
+  display: block;
+  font-size: 2rem;
+  height: 2em;
+  width: 2em;
+  margin: 0 auto;
+  color: $white;
+  position: relative;
+  line-height: 2em;
+  text-align: center;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $primary;
+    inset: 0;
+    border-radius: 10px;
+    transform: rotate(45deg);
+  }
+  a,
+  i {
+    position: relative;
+  }
+}

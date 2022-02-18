@@ -5,7 +5,8 @@
 
     <article class="container">
         <div class="wrapper">
-            <div class="icon">
+            <!-- zamenjena klasa icon u rotate-icon da bi je mogao koristiti globalno -->
+            <div class="rotate-icon">
                 <i class="fas fa-film"></i>
             </div>
             <h6>INSTRUCTIONAL VIDEO</h6>
@@ -14,7 +15,8 @@
         </div>
 
         <div class="wrapper">
-            <div class="icon">
+
+            <div class="rotate-icon">
                 <i class="fas fa-hand-point-right"></i>
             </div>
             <h6>INSTRUCTIONAL VIDEO</h6>
@@ -23,7 +25,7 @@
         </div>
 
         <div class="wrapper">
-            <div class="icon">
+            <div class="rotate-icon">
                 <i class="fas fa-car"></i>
             </div>
             <h6>INSTRUCTIONAL VIDEO</h6>
@@ -32,7 +34,7 @@
         </div>
 
         <div class="wrapper">
-            <div class="icon">
+            <div class="rotate-icon">
                 <i class="fas fa-address-card"></i>
             </div>
             <h6>INSTRUCTIONAL VIDEO</h6>

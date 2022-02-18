@@ -177,6 +177,12 @@
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4528.761487205526!2d-73.98537308849629!3d40.74914091302506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9e69d16c3%3A0x7a0716652d7d9778!2zMzc5IDV0aCBBdmUsIE5ldyBZb3JrLCBOWSAxMDAxNiwg0KHRmNC10LTQuNGa0LXQvdC1INCU0YDQttCw0LLQtQ!5e0!3m2!1ssr!2s!4v1644326917975!5m2!1ssr!2s"
         height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="rotate-icon">
+        <a target="_blank"
+            href="https://www.google.com/maps?ll=40.749252,-73.983534&z=16&t=m&hl=sr&gl=US&mapclient=embed&cid=8621354342505868311">
+            <i class="fas fa-map-marker-alt"></i>
+        </a>
+    </div>
 </section>
 
 

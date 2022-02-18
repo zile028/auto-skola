@@ -295,29 +295,10 @@ features
     p {
       margin-top: 10px;
     }
-    .icon {
-      display: block;
-      font-size: 2rem;
-      height: 2em;
-      width: 2em;
-      margin: 0 auto;
-      color: $white;
-      position: relative;
-      line-height: 2em;
-      margin-top: -1em;
+    // deo koda odavde je prebacen u global.scss
+    .rotate-icon {
       margin-bottom: 30px;
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: $primary;
-        inset: 0;
-        border-radius: 10px;
-        transform: rotate(45deg);
-      }
-      i {
-        position: relative;
-      }
+      margin-top: -1em;
     }
   }
 }
@@ -442,10 +423,47 @@ map
     display: block;
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba($black, 0.8), rgba($black, 0.8));
+    background: linear-gradient(rgba($black, 0.5), rgba($black, 0.5));
   }
   iframe {
     width: 100%;
+  }
+  // dodata je animacija na ikonicu u mapi
+  .rotate-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    cursor: pointer;
+    a {
+      display: block;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    &:hover {
+      a {
+        animation-name: jumping;
+        color: $white;
+      }
+    }
+  }
+}
+// ova animacija ima tri faze
+// 0% - pocetna faza i pomera se na gore za 10% svoje visine
+// 10% - druga faza i pomera se na dole za 10% svoje visine od inicijalne pozicije
+// 100% - zavrsna faza i pomera se na gore za 10% svoje visine od inicijalne pozicije
+// ova animacija se ponavlja u beskonacnosti sve dok je kursor na ovom elementu animation-iteration-count: infinite;
+@keyframes jumping {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
   }
 }
 
